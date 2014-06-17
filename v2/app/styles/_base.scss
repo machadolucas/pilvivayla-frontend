@@ -1,0 +1,19 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+// endbower
+@import 'fontface';
+
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+/*@include fontFace('Bello','fonts/Bello-Script');*/
+
+$default-font: Ubuntu, Helvetica, sans-serif;
+$header-height: 250px;
+$menu-height: 80px;
+$menu-padding-x: 10px;
+$menu-padding-y: 25px;
+$nav-height: 50px;
+$vertical-bar-color: #00629B;
+$banner-color: #5BC2E7;

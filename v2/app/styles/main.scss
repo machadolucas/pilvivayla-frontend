@@ -1,0 +1,198 @@
+@import "base";
+@import "animate/animate";
+
+* {
+  box-sizing: border-box;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+body {
+    font-family: $default-font;
+}
+
+textarea, input { outline: none; }
+
+.flex-container{
+    display: -webkit-flex !important;
+    display: flex !important;
+    /*flex-direction: row | row-reverse | column | column-reverse;*/
+    /*flex-wrap: nowrap | wrap | wrap-reverse;*/
+    /*flex-flow: <‘flex-direction’> || <‘flex-wrap’>*/
+    /*justify-content: flex-start | flex-end | center | space-between | space-around;*/
+    /*align-items: flex-start | flex-end | center | baseline | stretch;*/
+    /*align-content: flex-start | flex-end | center | space-between | space-around | stretch;*/
+}
+
+.flex-container-vertical {
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+   -moz-box-orient: vertical;
+   -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+   flex-direction: column;
+}
+.flexItem{
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.header {
+    height: $header-height;
+    text-align: center;
+    background: $banner-color;
+    h1 {
+        font-family: Ubuntu;
+        margin: 0px;
+        font-size: $header-height * 0.6;
+        line-height: $header-height;
+    }
+}
+
+img {
+    height: 100%;
+}
+
+.menu-column {
+    position: fixed;
+    height: $menu-height;
+    width: 100%;
+    background: $vertical-bar-color;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    text-align: center;
+    z-index: 100;
+    .menu-header {
+        height: 100%;
+        background: #ffffff;
+        justify-content: center;
+        -webkit-justify-content: center;
+        .menu-head-icon {
+            width: $menu-height;
+            height: $menu-height - 10;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .menu-icon {
+        margin: $menu-padding-y $menu-padding-x;
+        width: $menu-height - $menu-padding-y * 2;
+        height: $menu-height - $menu-padding-y * 2;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .menu-option{
+        text-align: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        .drawer {
+            display: none;
+            position: fixed;
+            background: #ffffff;
+            padding: 0px;
+            top: $menu-height;
+            left: 1%;
+            height: $menu-height;
+            width: 98%;
+            border: 1px solid $vertical-bar-color;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+    }
+    .menu-option:hover {
+        background: rgba(255,255,255,0.35);
+    }
+    .menu-option-active {
+        background: rgba(255,255,255,0.2);
+    }
+}
+.menu-block {
+    height: $menu-height;
+}
+
+.content-column {
+    position: relative;
+
+    .nav {
+        font-size: 0;
+        height: $nav-height;
+        li {
+            font-size: 22px;
+            display: inline-block;
+            margin: 0px;
+            background: #ededed;
+            width: 180px;
+            text-align: center;
+            font-family: Ubuntu;
+            
+            a {
+                color: #222;
+                height: $nav-height;
+                padding: 4px;
+            }
+            a:hover {
+                color: #000;
+                background: rgba(0,0,0,0.2);
+            }
+        }
+    }
+    #search-box {
+        float: right;
+        padding: 12px;
+        background: #ededed;
+        height: $nav-height;
+        input {
+            border-radius: 5px;
+            border: 2px solid #9a9a9a;
+        }
+        input:focus {
+            border: 2px solid #444444;
+        }
+    }
+   
+    .flex-container {
+        div.column {
+            overflow: scroll;
+            max-height: 600px;
+            padding: 10px; 
+        }
+        div:nth-child(odd) {background: #ffffff;}
+        div:nth-child(even) {background: #cfcfcf;}
+    }
+}
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        /*margin-bottom: 30px;*/
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
