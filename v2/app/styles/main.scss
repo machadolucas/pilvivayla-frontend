@@ -42,6 +42,10 @@ textarea, input { outline: none; }
     -webkit-flex: 1;
     flex: 1;
 }
+.flexItem2{
+    -webkit-flex: 2;
+    flex: 2;
+}
 
 .header {
     height: $header-height;
@@ -126,11 +130,10 @@ img {
         font-size: 0;
         height: $nav-height;
         li {
-            font-size: 22px;
+            font-size: 20px;
             display: inline-block;
             margin: 0px;
             background: #ededed;
-            width: 180px;
             text-align: center;
             font-family: Ubuntu;
             
@@ -147,7 +150,7 @@ img {
     }
     #search-box {
         float: right;
-        padding: 12px;
+        padding: 8px;
         background: #ededed;
         height: $nav-height;
         input {
